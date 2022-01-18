@@ -1,0 +1,22 @@
+Todo
+- when implementing database, need to add service calls in the models. 
+- checks for quests are to be done on the frontend
+- add a unique key to the quests and items
+- where to keep list of point type -> store items
+- completing quests adds points
+
+Interesting thoughts on what to implement?
+- enums for the type of quest, but is enums even in javascript? seems to be in typescript
+- completed quests contain all the quests? 
+    - lets keep them... organize by year/month/day etc..
+    - learn pagination! imagine if this helps with what Chon was doing lol, actually maybe, since I will be using sqlite too..
+- my model seems to be a mix of a controller and a model...
+    - model would just be the data itself, so the variables
+    - controllers are the functions doing the changes...
+- maybe i should seprate the model and controller, make the controller a js object
+- quests should have rewards
+    - .... i should make these into classes
+    - rewards can be points or just actual stuff
+    - ex. daily quest rewards gives me game time at night that i can redeem
+    - extra stuff like... coding/reading gives me points to spend
+- need to have a user class
