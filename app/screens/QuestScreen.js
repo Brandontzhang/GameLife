@@ -1,9 +1,9 @@
+import { LinearGradient } from 'expo-linear-gradient'
 import React from 'react'
 import { View, Text, StyleSheet, SafeAreaView, FlatList, Pressable } from 'react-native'
-import Accordion from '../components/Accordion'
+import Accordion from '../components/QuestAccordion/Accordion'
 import { QuestList } from '../model/questList'
 import { User } from '../model/user'
-
 
 export default function QuestScreen() {
 
@@ -12,38 +12,24 @@ export default function QuestScreen() {
     // get quest data
     const questList = new QuestList().getQuests()
 
-
-    const renderItem = (({item}) => {
+    const renderItem = (({item}, index) => {
         return(
-                <View style={styles.block}>
-                    <Text style={styles.name}>{item.name}</Text>
-                    <Accordion title={"hello"} data={"child data"}/>
-                </View>
+            <View style={styles.block}>
+                <Text style={styles.name}>{item.name}</Text>
+            </View>
         )
     })
-
     return (
-        <SafeAreaView style={styles.header}>
-            <Accordion title={"hello"} data={"child data"}/>
-            {/* <FlatList
-                data={questList}
-                renderItem={renderItem}
-                keyExtractor={item => item.name}
-            /> */}
-        </SafeAreaView>
+        <View style={styles.appView}>
+            <Accordion data={questList}/>
+        </View>
     )
 }
 
 const styles = StyleSheet.create({
-    header:{
-        flex:1,
-        backgroundColor: "black"
-    }, 
-    block: {
-        backgroundColor: "blue", 
-        padding: 20,
-        marginVertical: 8,
-        marginHorizontal: 16
+    appView: {
+        paddingTop: 10,
+        paddingBottom: 10
     },
     name: {
         fontSize: 16, 

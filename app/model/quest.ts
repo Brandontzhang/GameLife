@@ -1,4 +1,5 @@
 export class Quest {
+    id: number;
     name: string;
     repeat: string;
     points: number;
@@ -7,7 +8,8 @@ export class Quest {
     tags: string[];
 
     // No constructor overloading in typescript for some reason...
-    constructor(name: string, repeat: string, points: number, type: string, details: string, tags: string[]) {
+    constructor(id: number, name: string, repeat: string, points: number, type: string, details: string, tags: string[]) {
+        this.id = id;
         this.name = name;
         this.repeat = repeat;
         this.points = points;

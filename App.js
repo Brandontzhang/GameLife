@@ -1,11 +1,20 @@
+import { LinearGradient } from 'expo-linear-gradient';
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import QuestScreen from './app/screens/QuestScreen';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 
 export default function App() {
   return (
-    <QuestScreen/>
+    <SafeAreaView style={styles.header}>
+      <LinearGradient 
+        colors={['#9C51B6', '#5946B2']} 
+        style={{
+          flex: 1
+        }}>
+          <QuestScreen/>
+      </LinearGradient>
+    </SafeAreaView>
   );
 }
 
@@ -16,4 +25,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  header:{
+    flex:1,
+    backgroundColor: "#9C51B6"
+}, 
 });

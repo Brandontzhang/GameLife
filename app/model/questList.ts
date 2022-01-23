@@ -10,11 +10,12 @@ export class QuestList {
 
     constructor() {
         this.questList = [
-            new Quest("Eat a healthy lunch", "daily", 1, "health", "", ["Fitness"]),
-            new Quest("Eat a healthy dinner", "daily", 1, "health", "", ["Fitness"]),
-            new Quest("No unhealthy food", "daily", 1, "health", "", ["Fitness"]),
-            new Quest("Gym", "daily", 1, "health", "", ["Fitness"]),
+            new Quest(0, "Eat a healthy lunch", "daily", 1, "health", "Keep counting those macros", ["Fitness"]),
+            new Quest(1, "Eat a healthy dinner", "daily", 1, "health", "Don't eat after this!", ["Fitness"]),
+            new Quest(2, "No unhealthy food", "daily", 1, "health", "So many food goals", ["Fitness"]),
+            new Quest(3, "Make a meatball sandwich", "false", 1, "cooking", "Gotta use that stale bread", ["Cooking", "Hobby"])
             // {name: "Make a cheese cake", repeat:"false", points: 1, type:"cooking", details: "", tags:["Cooking", "Hobby"]},
+            // new Quest(3, "Gym", "daily", 1, "health", "", ["Fitness"]),
             // {name: "Make mooncakes", repeat:"false", points: 1, type:"cooking", details:"", tags:["Cooking", "Hobby"]},
             // {name: "Stretching", repeat:"false", points: 1, type:"health", details:"", tags:["Fitness", "Future"]},
             // {name: "Invest in S&P 500", repeat:"false", points: 1, type:"investing", details:"", tags:["Self improvement"]},
